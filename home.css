@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Barra Superior */
+.top-bar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #555555;
+    border-radius: 2px;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafbfc;
+    position: relative;
+}
+
+.center-container {
+    text-align: center;
+    color: #9aa0a6;
+}
+
+/* Lógica de Abas (Esconder/Mostrar) */
+.tab-content {
+    display: none; /* Esconde por padrão */
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-content.active {
+    display: flex; /* Mostra apenas a ativa */
+}
+
+.main-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    stroke: #bcc1c6;
+}
+
+.content-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Barra de Navegação Inferior */
+.bottom-nav {
+    background-color: #1a73e8;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    opacity: 0.6;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    gap: 4px;
+    transition: opacity 0.2s ease;
+}
+
+.nav-item.active {
+    opacity: 1;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-divider {
+    width: 1px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
